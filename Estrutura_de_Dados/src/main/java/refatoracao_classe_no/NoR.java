@@ -1,4 +1,4 @@
-package br.com.dio.conceitos_basicos.refatoracao_classe_no;
+package refatoracao_classe_no;
 
 import br.com.dio.conceitos_basicos.nó_encadeamento_de_nó.No;
 

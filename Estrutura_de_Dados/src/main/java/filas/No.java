@@ -1,4 +1,4 @@
-package br.com.dio.filas;
+package filas;
 
 public class No<T> {
 

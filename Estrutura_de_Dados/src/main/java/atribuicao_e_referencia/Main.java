@@ -1,4 +1,4 @@
-package br.com.dio.conceitos_basicos.atribuicao_e_referencia;
+package atribuicao_e_referencia;
 
 public class Main {
 

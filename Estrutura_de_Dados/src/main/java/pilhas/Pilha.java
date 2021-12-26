@@ -1,4 +1,4 @@
-package br.com.dio.pilhas;
+package pilhas;
 
 public class Pilha {
 

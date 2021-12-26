@@ -1,4 +1,4 @@
-package br.com.dio.conceitos_basicos.nÃ³_encadeamento_de_nÃ³;
+package nó_encadeamento_de_nó³_encadeamento_de_nÃ³;
 
 public class Main {
 
