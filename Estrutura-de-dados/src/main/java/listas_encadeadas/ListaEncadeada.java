@@ -1,5 +1,6 @@
 package listas_encadeadas;
 
+
 public class ListaEncadeada<T> {
 
 	No<T> referenciaEntrada;
@@ -24,16 +25,17 @@ public class ListaEncadeada<T> {
 			noAuxiliar = noAuxiliar.getProximoNo();
 		}
 		
-		noAuxiliar = noAuxiliar.getProximoNo();
+		noAuxiliar.setProximoNo(novoNo);
 	}
 	
+	//GetNo
 	private No<T> getNo(int index){
 		
 		validaIndice(index);
 		No<T> noAuxiliar = referenciaEntrada;
 		No<T> noRetorno = null;
 		
-		for (int i = 0; i < this.size()-1; i++) {
+		for (int i = 0; i <= index; i++) {
 			noRetorno = noAuxiliar;
 			noAuxiliar = noAuxiliar.getProximoNo();
 		}
@@ -41,7 +43,30 @@ public class ListaEncadeada<T> {
 	}
 	
 	
-	// método Size
+	// Remove
+	public T remove(int index) {
+		
+		No<T> noPivor = this.getNo(index);
+		
+		if(index == 0) {
+			referenciaEntrada = noPivor.getProximoNo();
+			return noPivor.getConteudo();
+			
+		}
+		
+		No<T> noAnterior = getNo(index - 1);
+		noAnterior.setProximoNo(noPivor.getProximoNo());
+		return noPivor.getConteudo();
+		
+	}
+	
+	// Get
+	public T get(int index) {
+		return getNo(index).getConteudo();
+	}
+	
+	
+	// Size
 	public int size() {
 		int tamanhoLista = 0;
 		No<T> referenciaAux = referenciaEntrada;
@@ -62,6 +87,7 @@ public class ListaEncadeada<T> {
 		return tamanhoLista;
 	}
 	
+	//Valida indice
 	public void validaIndice(int index ) {
 		if(index >= size()) {
 			int ultimoIndice = size() -1;
@@ -70,9 +96,25 @@ public class ListaEncadeada<T> {
 		}
 	}
 	
-	// método isEmpty
+	// isEmpty
 	public boolean isEmpty() {
 		return referenciaEntrada == null? true : false;
+	}
+	
+	
+	// toString
+	@Override
+	public String toString() {
+		String strRetorno = "";
+		No<T> noAuxiliar = referenciaEntrada;
+		for(int i = 0; i < this.size(); i++) {
+			strRetorno += "[No{conteudo="+ noAuxiliar.getConteudo() + "}--->";
+			noAuxiliar = noAuxiliar.getProximoNo();
+		}
+		
+		strRetorno += "null";
+		
+		return strRetorno;
 	}
 	
 }
