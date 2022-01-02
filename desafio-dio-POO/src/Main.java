@@ -13,18 +13,22 @@ public class Main {
         curso1.setDescricao("Descrição Curso Java");
         curso1.setCargaHoraira(8);
 
+        //Instancia do objeto curso
         Curso curso2 = new Curso();
 
         curso2.setTitulo("Curso de JavaScript");
         curso2.setDescricao("Descrição Curso de JavaScript");
         curso2.setCargaHoraira(4);
 
+        //Instancia do objeto metoria
         Mentoria mentoria = new Mentoria();
 
         mentoria.setTitulo("Mentoria de Java");
         mentoria.setDescricao("Descrição mentoria Java");
         mentoria.setData(LocalDate.now());
 
+
+        //impressões dos objetos
         System.out.println(curso1);
         System.out.println(curso2);
         System.out.println(mentoria);
