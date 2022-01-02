@@ -33,7 +33,6 @@ public class Dev {
 
     }
 
-
     public String getNome() {
         return nome;
     }
